@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Bes School 10 times, with bad luck on the 4th good on 8th
+COUNTER=0
+while [ $COUNTER -lt 10 ];do
+	if [ $COUNTER -eq 3 ]
+	then
+		echo "bad luck"
+	elif [ $COUNTER -eq 7 ]
+	then
+		echo "good luck"
+	else
+		echo "Best School"
+	fi
+	let COUNTER=COUNTER+1
+done
