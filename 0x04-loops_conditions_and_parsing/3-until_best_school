@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Display Best School 10 times
-COUNTER=0
-while [ $COUNTER -lt 10 ];do
+COUNTER=10
+until [ $COUNTER -lt 1 ];do
 	echo "Best School"
-	let COUNTER=COUNTER+1
+	let COUNTER-=1
 done
+Footer
