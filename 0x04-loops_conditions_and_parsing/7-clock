@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Display time in minutes from hours 0 to 12
+COUNTER=59
+HOUR=0
+while [ $HOUR -lt 14 ];do
+	let COUNTER=COUNTER+1
+	if [ $COUNTER -ne 60 ]
+	then
+		echo "$COUNTER"
+	else
+		if [ $HOUR -ne 13 ]
+		then
+			echo "Hour: $HOUR"
+		fi
+		let COUNTER=0
+		let HOUR=HOUR+1
+	fi
+done
