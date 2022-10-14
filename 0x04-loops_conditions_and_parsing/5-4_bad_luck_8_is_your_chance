@@ -11,5 +11,5 @@ while [ $COUNTER -lt 10 ];do
 	else
 		echo "Best School"
 	fi
-	let COUNTER=COUNTER+1
+	((COUNTER=COUNTER+1))
 done
