@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Display 1 to 20, replacing bad luck numbers
+COUNTER=0
+while [ $COUNTER -lt 20 ];do
+	let COUNTER=COUNTER+1
+	echo "$COUNTER"
+	case $COUNTER in
+	4) echo "bad luck from China";;
+	9) echo "bad luck from Japan";;
+	17) echo "bad luck from Italy";;
+	esac
+done
