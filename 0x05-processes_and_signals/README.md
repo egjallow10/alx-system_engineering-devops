@@ -1,0 +1,2 @@
+0x05. Processes and signals
+ process can be thought of as an instance of a program in execution. We called this an ‘instance of a program’, because if the same program is run lets say 10 times then there will be 10 corresponding processes. by HIMANSHU ARORA 
