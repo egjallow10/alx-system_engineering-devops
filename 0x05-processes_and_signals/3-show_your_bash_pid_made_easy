@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#The script prints pid and bash
+
+pgrep -l bash
