@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#print infinity until press clt C
+
+COUNTER=0
+while [ $COUNTER -lt 10 ];do
+	echo "To infinity and beyond"
+    sleep 2
+	
+done
+
