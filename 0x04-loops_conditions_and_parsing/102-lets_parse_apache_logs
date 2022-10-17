@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Script that prints the lsit of ip addrs and 
+
+awk'{print $1,$9}' appachce-access.log
