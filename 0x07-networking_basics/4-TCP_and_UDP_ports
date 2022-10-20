@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This Script will that displays listening ports, sockets, PID and name of the program to which each socket belong
+netstat -ano -lp
