@@ -1,3 +1,3 @@
 #!/usr/bin/env ruby
 # Scrip regular expression Repetition Token #1
-puts ARGV[0].scan(/hbt?n/).join
+puts ARGV[0].scan(/hb?tn/).join
