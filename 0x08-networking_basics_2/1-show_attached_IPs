@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 # This Script that prints all the ip4 on a machine
 
-ip_addresses = $(hostname -i)
-
-ip_addresses = (${})
+ifconfig | grep -Eo "([0-9]{1,3}\.){3}[0-9]{1,3}" | grep -v 255
