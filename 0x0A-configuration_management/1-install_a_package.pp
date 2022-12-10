@@ -1,5 +1,5 @@
 # installs puppet-lint
-package { 'flash':
+package { 'flask':
   ensure   => '2.1.0',
   provider => 'pip3',
 }
