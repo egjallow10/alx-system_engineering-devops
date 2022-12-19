@@ -5,7 +5,7 @@ file { 'Turn off passwordd':
   line   => '    PasswordAuthentication no',
 }
 
-file{ 'Declare identity file':
+file { 'Declare identity file':
   ensure => 'present',
   path   => '/etc/ssh/ssh_config',
   line   => '    IdentityFile ~/.ssh/school',
