@@ -1,8 +1,8 @@
 #!/bin/env bash
 #install ngnix and let it prints hello world
 
-apt-get -y update
-apt-get -y install ngnix
-ufw allow 'Nginx HTTP'
+sudo apt-get -y update
+sudo apt-get -y install ngnix
+sudo ufw allow 'Nginx HTTP'
 echo "Hellow World!"> | sudo tee /var/www/html/index.html
-services ngnix start 
+sudo services ngnix start 
