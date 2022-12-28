@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#install ngnix and let it prints hello world
+
+apt-get -y update
+apt-get -y install nginx
+su ufw allow 'Nginx HTTP'
+sudo echo "Hello World!" > /var/www/html/index.html
+text="location /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}"
+sudo sed -i "/^}/ i $text" /etc/nginx/sites-enabled/default
+service nginx start 
