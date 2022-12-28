@@ -1,0 +1,2 @@
+	server_name _;
+	rewrite ^/redirect_me https://www.youtube.com
