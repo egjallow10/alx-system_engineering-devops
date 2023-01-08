@@ -1,0 +1,9 @@
+What happens when you type google.com in your browser and press Enter
+When you enter a website URL into your browser and hit enter, a series of events is initiated to retrieve the webpage and display it in your browser. Here is a breakdown of these steps:
+The URL that you typed into the address bar is sent to a Domain Name System (DNS) server, which converts the domain name (e.g. “google.com”) into an Internet Protocol (IP) address. The IP address is a numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication.
+
+Once the DNS has resolved the URL to an IP address, your browser sends a request to the server at that address, using the Transmission Control Protocol (TCP). TCP is a set of rules that governs the exchange of data between devices on the internet. It ensures that data is divided into small packets, which are transmitted separately and reassembled on arrival.
+
+The server receives the request and processes it, sending back a response to your browser. This response includes the HTML code for the webpage, as well as any other resources that the page needs (such as images, stylesheets, and JavaScript files).
+
+Your browser receives the response and begins to render the webpage. It uses HTML code to create a visual representation of the page and executes any JavaScript code that is included. If the initial response from the server does not include all the necessary resources, the browser may send additional requests to the server to retrieve them. Once the rendering is complete, the webpage is displayed in your browser window.
