@@ -18,7 +18,6 @@ Employee [EMPLOYEE_NAME] is done with tasks(#_DONE_TASKS/TOTAL_#_TASKS):
 
 if __name__ == '__main__':
     import requests
-    from requests import get
     from sys import argv
 
     try:
