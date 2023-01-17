@@ -18,24 +18,28 @@ Employee [EMPLOYEE_NAME] is done with tasks(#_DONE_TASKS/TOTAL_#_TASKS):
 
 if __name__ == '__main__':
     import requests
-    from sys import argv
+    import sys
 
-    try:
-        employee_id = int(argv[1])
-        api_url = 'https://jsonplaceholder.typicode.com'
-        users = requests.get(
-            '{}/users/{}'.format(api_url, employee_id))
-        name = users.json()['name']
-        todos = requests.get(
-            '{}/todos?userId={}'.format(api_url, employee_id))
-        total_tasks = len(todos.json())
-        done_tasks = 0
-        done_titles = ""
-        for i in todos.json():
-            if i['completed'] is True:
-                done_tasks += 1
-                done_titles += "\n\t {}".format(i['title'])
-        print('Employee {} is done with tasks({}/{}):{}'.format(
-            name, done_tasks, total_tasks, done_titles))
-    except(RuntimeError, TypeError, NameError):
-        pass
+    Id = sys.argv[1]
+    baseUrl = "https://jsonplaceholder.typicode.com/users"
+    url = baseUrl + "/" + Id
+
+    response = requests.get(url)
+    employeeName = response.json().get('name')
+
+    todoUrl = url + "/todos"
+    response = requests.get(todoUrl)
+    tasks = response.json()
+    done = 0
+    done_tasks = []
+
+    for task in tasks:
+        if task.get('completed'):
+            done_tasks.append(task)
+            done += 1
+
+    print("Employee {} is done with tasks({}/{}):"
+          .format(employeeName, done, len(tasks)))
+
+    for task in done_tasks:
+        print("\t {}".format(task.get('title')))
