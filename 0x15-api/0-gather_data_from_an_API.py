@@ -1,18 +1,7 @@
 #!/usr/bin/python3
 '''
 Using the JSONPlaceholder API, returns the TODO list
-corresponding to a given employee ID.
-USAGE:
->$ ./0-gather_data_from_an_API.py <NUMERIC_ID>
-Employee [EMPLOYEE_NAME] is done with tasks(#_DONE_TASKS/TOTAL_#_TASKS):
-     distinctio vitae autem nihil ut molestias quo
-     voluptas quo tenetur perspiciatis explicabo natus
-     aliquam aut quasi
-     veritatis pariatur delectus
-     nemo perspiciatis repellat ut dolor libero commodi blanditiis omnis
-     repellendus veritatis molestias dicta incidunt
-     excepturi deleniti adipisci voluptatem et neque optio illum ad
-     totam atque quo nesciunt
+corresponding to a given employee ID
 '''
 
 
