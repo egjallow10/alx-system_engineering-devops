@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Start Nginx service if not running
 sudo service nginx status &> /dev/null || sudo service nginx start
 
