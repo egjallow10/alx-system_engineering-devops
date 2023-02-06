@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# returns nginx html page without nginx running
+sed -i -e 's/enabled/available/g' /etc/nginx/nginx/conf
+sudo service nginx restart
+sudo service nginx stop
