@@ -1,19 +1,5 @@
-#!/bin/bash
-# Start Nginx service if not running
-sudo service nginx status &> /dev/null || sudo service nginx start
-
-# Allow incoming traffic on port 80
-sudo ufw allow 80/tcp &> /dev/null
-
-# Check Nginx configuration file
-if ! grep -q "listen 80 default_server" /etc/nginx/sites-available/default; then
-  echo "Setting Nginx to listen on port 80 for all IPs"
-  sudo bash -c "cat >> /etc/nginx/sites-available/default << EOL
-server {
-    listen 80 default_server;
-    listen [::]:80 default_server;
-    ...
-}
-EOL"
-  sudo service nginx restart
-fi
+#!/usr/bin/env bash
+# fixes nginx port 8080 default issue
+sudo apt-get -y install curl
+sed -i -e 's/enabled/available/g' /etc/nginx/nginx.conf
+sudo service nginx restart
