@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 #install ngnix and let it prints hello world
 
-apt-get -y update
-apt-get -y install nginx
-ufw allow 'Nginx HTTP'
-sudo echo "Hello World!" > /var/www/html/index.html
-replace_text="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.youtube.com/watch?v=QH2-TGUlwu4;"
-sed -i s/"server_name _;/${replace_text}" /etc/nginx/sites-enabled/default
-service nginx start 
+sudo apt-get -y update
+sudo apt-get -y install nginx
+echo "Hello World!" | sudo -a tee /var/www/html/index.html
+sudo service nginx stop
+redirect="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.skysports.com permanent;"
+sudo sed -i "s/server_name _;/$redirect/" /etc/nginx/sites-enabled/default
+sudo service nginx restart
