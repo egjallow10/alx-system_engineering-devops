@@ -4,7 +4,7 @@
 apt-get -y update
 apt-get -y install nginx
 ufw allow 'Nginx HTTP'
-echo "Hello World!" > /var/www/html/index.html
-text="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.youtube.com/watch?v=QH2-TGUlwu4;"
-sed -i "s/server_name _;/$text" /etc/nginx/sites-enabled/default
+sudo echo "Hello World!" > /var/www/html/index.html
+replace_text="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.youtube.com/watch?v=QH2-TGUlwu4;"
+sed -i s/"server_name _;/${replace_text}" /etc/nginx/sites-enabled/default
 service nginx start 
